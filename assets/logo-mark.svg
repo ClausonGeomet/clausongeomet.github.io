@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Clauson Geomet mark</title>
+  <desc id="desc">Four-quadrant emblem representing statistics, geology, process flows and modelling.</desc>
+  <defs>
+    <clipPath id="circle"><circle cx="120" cy="120" r="105"/></clipPath>
+    <style>
+      .navy{stroke:#071e35;fill:#071e35}.teal{stroke:#287875;fill:#287875}.copper{stroke:#c75a24;fill:#c75a24}
+      .line{fill:none;stroke:#071e35;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <circle cx="120" cy="120" r="105" fill="#f2eee4" stroke="#071e35" stroke-width="7"/>
+  <path d="M120 15V225M15 120H225" stroke="#071e35" stroke-width="6"/>
+
+  <!-- histogram -->
+  <g class="navy">
+    <rect x="36" y="76" width="12" height="25" rx="1"/>
+    <rect x="55" y="62" width="12" height="39" rx="1"/>
+    <rect x="74" y="45" width="12" height="56" rx="1"/>
+    <rect x="93" y="70" width="12" height="31" rx="1"/>
+    <rect x="31" y="101" width="79" height="5" rx="2"/>
+  </g>
+
+  <!-- drill core -->
+  <g clip-path="url(#circle)">
+    <rect x="146" y="42" width="48" height="65" rx="5" fill="#caa76b" stroke="#071e35" stroke-width="5"/>
+    <ellipse cx="170" cy="43" rx="24" ry="7" fill="#57422c" stroke="#071e35" stroke-width="5"/>
+    <path d="M148 59c12 7 25 9 44-1M148 76c12-7 27-11 44-17M148 92c14 8 27 5 44-8" fill="none" stroke="#f2eee4" stroke-width="5" stroke-linecap="round"/>
+    <path d="M148 67c13 3 27 0 44-7M148 84c15-5 28-12 44-17M148 99c15 1 29-5 44-13" fill="none" stroke="#8a6035" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- process flow -->
+  <g fill="none" stroke="#287875" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="34" y="146" width="28" height="22" rx="4" fill="#287875" stroke="none"/>
+    <path d="M61 157h27c12 0 18 6 18 17v7"/>
+    <path d="M100 176l7 8 7-8"/>
+    <circle cx="51" cy="198" r="10"/>
+    <path d="M61 198h30"/>
+    <rect x="91" y="185" width="28" height="25" rx="4" fill="#287875" stroke="none"/>
+  </g>
+
+  <!-- scatter / trend -->
+  <g>
+    <path d="M141 202V145M141 202H203" class="line" stroke-width="5"/>
+    <path d="M149 195c12-4 22-13 32-27 7-10 14-16 21-19" class="line" stroke-width="5"/>
+    <g class="copper" stroke="none">
+      <circle cx="153" cy="188" r="5"/><circle cx="163" cy="177" r="5"/><circle cx="167" cy="194" r="5"/>
+      <circle cx="176" cy="164" r="5"/><circle cx="179" cy="183" r="5"/><circle cx="189" cy="154" r="5"/>
+      <circle cx="193" cy="173" r="5"/><circle cx="201" cy="160" r="5"/>
+    </g>
+  </g>
+</svg>
