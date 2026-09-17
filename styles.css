@@ -69,10 +69,10 @@ h1{
 .section-heading{display:grid;grid-template-columns:1fr 3fr;gap:40px;margin-bottom:58px}
 .section-heading h2,.about h2,.contact h2{font-size:clamp(2.8rem,6vw,6.4rem);line-height:.92;letter-spacing:-.045em;margin:0}
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.service-card{min-height:370px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.service-card{min-height:390px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
 .card-number{font-size:.75rem;letter-spacing:.14em;color:var(--copper);font-weight:700}
-.service-card h3{font-size:1.65rem;margin:110px 0 18px;letter-spacing:-.02em}
-.service-card p{color:#354454;max-width:30ch;margin-bottom:0}
+.service-card h3{font-size:1.65rem;margin:100px 0 18px;letter-spacing:-.02em;max-width:13ch}
+.service-card p{color:#354454;max-width:32ch;margin-bottom:0}
 
 .work-heading{margin-bottom:42px}
 .work-list{border-top:1px solid var(--line)}
@@ -82,6 +82,12 @@ h1{
 .work-title{font-size:clamp(1.35rem,2.6vw,2.7rem);letter-spacing:-.03em}
 .work-arrow{color:var(--copper);font-size:1.4rem;text-align:right}
 
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.experience-card{padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:420px;display:flex;flex-direction:column}
+.experience-kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);font-weight:700;margin-bottom:80px}
+.experience-card h3{font-size:clamp(1.45rem,2.2vw,2.25rem);line-height:1.05;letter-spacing:-.03em;margin-bottom:22px;max-width:14ch}
+.experience-card p:last-child{color:#354454;margin-bottom:0;max-width:38ch}
+
 .about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:80px;align-items:start;margin-top:46px}
 .about-copy{padding-top:10px;font-size:1.18rem}
 .about-copy p+p{margin-top:24px}
@@ -90,7 +96,7 @@ h1{
 .contact .section-index{margin-bottom:46px}
 .contact h2{max-width:900px}
 .contact-sub{margin-top:28px;color:#435261}
-.contact-links{display:flex;gap:30px;margin-top:48px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.contact-links{display:flex;gap:30px;margin-top:48px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;flex-wrap:wrap}
 .contact-links a{border-bottom:1px solid var(--copper);padding-bottom:5px}
 .contact-mark{position:absolute;width:min(36vw,440px);right:0;top:40px;opacity:.07;pointer-events:none}
 
@@ -104,9 +110,10 @@ h1{
   .hero-side{max-width:620px}
   .hero-emblem{width:90px;bottom:-25px}
   .statement-copy{font-size:2.4rem}
-  .service-grid{grid-template-columns:1fr}
-  .service-card{min-height:auto}
+  .service-grid,.experience-grid{grid-template-columns:1fr}
+  .service-card,.experience-card{min-height:auto}
   .service-card h3{margin-top:58px}
+  .experience-kicker{margin-bottom:46px}
   .work-row{grid-template-columns:120px 1fr 22px}
   .about-grid{gap:36px}
 }
