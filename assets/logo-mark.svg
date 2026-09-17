@@ -1,51 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
-  <title id="title">Clauson Geomet mark</title>
-  <desc id="desc">Four-quadrant emblem representing statistics, geology, process flows and modelling.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Clauson Geomet emblem</title>
+  <desc id="desc">Circular four-quadrant emblem with mountains, wave, geological contours and statistical trend plot.</desc>
   <defs>
-    <clipPath id="circle"><circle cx="120" cy="120" r="105"/></clipPath>
     <style>
-      .navy{stroke:#071e35;fill:#071e35}.teal{stroke:#287875;fill:#287875}.copper{stroke:#c75a24;fill:#c75a24}
-      .line{fill:none;stroke:#071e35;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .navy{stroke:#1f3143;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .navy-fill{fill:#1f3143}
+      .sage{fill:#9cad95}
+      .sage-line{stroke:#d9e0d4;fill:none;stroke-linecap:round}
+      .teal{fill:#2f7f8f}
+      .aqua{stroke:#9bbab7;fill:none;stroke-linecap:round}
     </style>
+    <clipPath id="tl"><rect x="52" y="52" width="204" height="204"/></clipPath>
+    <clipPath id="tr"><rect x="256" y="52" width="204" height="204"/></clipPath>
+    <clipPath id="bl"><rect x="52" y="256" width="204" height="204"/></clipPath>
+    <clipPath id="br"><rect x="256" y="256" width="204" height="204"/></clipPath>
   </defs>
-  <circle cx="120" cy="120" r="105" fill="#f2eee4" stroke="#071e35" stroke-width="7"/>
-  <path d="M120 15V225M15 120H225" stroke="#071e35" stroke-width="6"/>
 
-  <!-- histogram -->
-  <g class="navy">
-    <rect x="36" y="76" width="12" height="25" rx="1"/>
-    <rect x="55" y="62" width="12" height="39" rx="1"/>
-    <rect x="74" y="45" width="12" height="56" rx="1"/>
-    <rect x="93" y="70" width="12" height="31" rx="1"/>
-    <rect x="31" y="101" width="79" height="5" rx="2"/>
+  <circle cx="256" cy="256" r="220" fill="#f7f4ec" stroke="#1f3143" stroke-width="10"/>
+  <line x1="256" y1="36" x2="256" y2="476" class="navy" stroke-width="8"/>
+  <line x1="36" y1="256" x2="476" y2="256" class="navy" stroke-width="8"/>
+
+  <g clip-path="url(#tl)">
+    <path d="M72 231 L131 171 L151 194 L190 126 L219 170 L238 151 L272 198 L286 231 Z" class="navy-fill"/>
+    <path d="M103 214 L132 184 L147 201 L190 144 L214 180 L232 162 L264 205" class="navy" stroke-width="6"/>
+    <path d="M178 148 L190 126 L204 151 L214 142 L226 164" stroke="#f7f4ec" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M116 190 L131 172 L141 183" stroke="#f7f4ec" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- drill core -->
-  <g clip-path="url(#circle)">
-    <rect x="146" y="42" width="48" height="65" rx="5" fill="#caa76b" stroke="#071e35" stroke-width="5"/>
-    <ellipse cx="170" cy="43" rx="24" ry="7" fill="#57422c" stroke="#071e35" stroke-width="5"/>
-    <path d="M148 59c12 7 25 9 44-1M148 76c12-7 27-11 44-17M148 92c14 8 27 5 44-8" fill="none" stroke="#f2eee4" stroke-width="5" stroke-linecap="round"/>
-    <path d="M148 67c13 3 27 0 44-7M148 84c15-5 28-12 44-17M148 99c15 1 29-5 44-13" fill="none" stroke="#8a6035" stroke-width="5" stroke-linecap="round"/>
+  <g clip-path="url(#tr)">
+    <path d="M274 226 C298 184 332 151 374 151 C413 151 445 179 449 215 C431 191 407 183 386 191 C367 198 359 214 358 229 C380 220 405 223 430 239 L274 239 Z" class="teal"/>
+    <path d="M274 219 C304 159 349 139 390 145 C421 150 444 172 450 198" class="aqua" stroke-width="11"/>
+    <path d="M300 210 C325 166 359 151 391 154 C417 156 435 171 443 189" class="aqua" stroke-width="6"/>
+    <path d="M352 226 C361 199 377 184 397 181 C415 178 431 187 438 200 C426 194 413 195 404 201 C395 207 391 215 391 225 C405 222 420 227 434 238" class="navy" stroke-width="8"/>
   </g>
 
-  <!-- process flow -->
-  <g fill="none" stroke="#287875" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="34" y="146" width="28" height="22" rx="4" fill="#287875" stroke="none"/>
-    <path d="M61 157h27c12 0 18 6 18 17v7"/>
-    <path d="M100 176l7 8 7-8"/>
-    <circle cx="51" cy="198" r="10"/>
-    <path d="M61 198h30"/>
-    <rect x="91" y="185" width="28" height="25" rx="4" fill="#287875" stroke="none"/>
+  <g clip-path="url(#bl)">
+    <path d="M52 270 H252 V460 H52 Z" class="sage"/>
+    <path d="M66 279 C119 281 185 305 244 345" class="sage-line" stroke-width="4"/>
+    <path d="M64 294 C121 297 184 318 245 360" class="sage-line" stroke-width="4"/>
+    <path d="M64 311 C120 314 186 335 246 378" class="sage-line" stroke-width="4"/>
+    <path d="M66 328 C124 332 188 352 247 394" class="sage-line" stroke-width="4"/>
+    <path d="M70 346 C130 351 192 369 248 410" class="sage-line" stroke-width="4"/>
+    <path d="M76 365 C136 369 195 388 248 426" class="sage-line" stroke-width="4"/>
+    <path d="M84 385 C144 389 200 406 247 440" class="sage-line" stroke-width="4"/>
   </g>
 
-  <!-- scatter / trend -->
-  <g>
-    <path d="M141 202V145M141 202H203" class="line" stroke-width="5"/>
-    <path d="M149 195c12-4 22-13 32-27 7-10 14-16 21-19" class="line" stroke-width="5"/>
-    <g class="copper" stroke="none">
-      <circle cx="153" cy="188" r="5"/><circle cx="163" cy="177" r="5"/><circle cx="167" cy="194" r="5"/>
-      <circle cx="176" cy="164" r="5"/><circle cx="179" cy="183" r="5"/><circle cx="189" cy="154" r="5"/>
-      <circle cx="193" cy="173" r="5"/><circle cx="201" cy="160" r="5"/>
+  <g clip-path="url(#br)">
+    <line x1="286" y1="428" x2="286" y2="290" class="navy" stroke-width="7"/>
+    <line x1="286" y1="428" x2="435" y2="428" class="navy" stroke-width="7"/>
+    <path d="M302 407 C325 388 348 369 369 351 C390 334 411 314 432 294" stroke="#8fae9f" fill="none" stroke-width="8" stroke-linecap="round"/>
+    <g class="navy-fill">
+      <circle cx="316" cy="397" r="7"/><circle cx="338" cy="382" r="7"/><circle cx="355" cy="368" r="7"/>
+      <circle cx="376" cy="353" r="7"/><circle cx="395" cy="339" r="7"/><circle cx="417" cy="323" r="7"/>
+      <circle cx="340" cy="346" r="7"/><circle cx="383" cy="386" r="7"/><circle cx="425" cy="360" r="7"/>
     </g>
   </g>
 </svg>
