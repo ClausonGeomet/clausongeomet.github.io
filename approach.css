@@ -1,0 +1,44 @@
+/* Statistical geometallurgy positioning; preserves the existing brand palette. */
+.site-header{gap:28px}
+.nav{flex-wrap:wrap;justify-content:flex-end;column-gap:22px;row-gap:0}
+.nav a{white-space:nowrap}
+.skip-link{position:absolute;left:16px;top:-100px;z-index:10;background:var(--navy);color:var(--cream);padding:12px 18px}
+.skip-link:focus{top:12px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:5px}
+#approach,#research{scroll-margin-top:24px}
+.approach .section-heading h2{font-size:clamp(2.6rem,5.4vw,5.8rem);line-height:1}
+.definition-copy{max-width:67ch;margin:28px 0 0;font-size:clamp(1.1rem,1.55vw,1.3rem);color:#45525d}
+.definition-copy strong{color:var(--navy)}
+.method-grid,.research-grid{display:grid;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.method-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.method-card,.research-card{min-width:0;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.method-card .experience-kicker,.research-card .experience-kicker{margin-bottom:38px}
+.method-card h3,.research-card h3{font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.12;letter-spacing:-.025em;margin-bottom:22px}
+.method-card>p:last-child,.research-card>p{color:#45525d}
+.method-card>p:last-child{margin-bottom:0}
+.research-card>.experience-kicker{color:var(--teal)}
+.positioning-callout{max-width:960px;border-left:3px solid var(--sage);padding:4px 0 4px 24px;margin:38px 0 24px;font-size:clamp(1.1rem,1.8vw,1.45rem);line-height:1.5}
+.positioning-callout strong{display:block;margin-bottom:8px}
+.inspiration-note,.method-sources{font-size:.88rem;line-height:1.65;color:#45525d}
+.inspiration-note{max-width:96ch;margin-bottom:0}
+.inspiration-note a,.method-sources a,.about-copy>p a{text-decoration:underline;text-underline-offset:3px}
+.research-card .research-question{border-top:1px solid var(--line);padding-top:20px;margin:24px 0 0;color:var(--navy);font-weight:600}
+.method-sources{margin-top:28px;max-width:100ch}
+.method-sources summary{cursor:pointer;font-weight:700;color:var(--navy);padding:10px 0}
+.method-sources ul{padding-left:22px}
+.method-sources li+li{margin-top:10px}
+@media(max-width:900px){
+  .method-grid{grid-template-columns:1fr}
+  .method-card .experience-kicker{margin-bottom:22px}
+  .site-header{flex-wrap:wrap;gap:12px;padding-block:16px}
+  .nav{display:flex;width:100%;justify-content:flex-start;font-size:.67rem;gap:2px 20px}
+}
+@media(max-width:600px){
+  h1{font-size:clamp(2.45rem,13.2vw,5rem)}
+  .research-grid{grid-template-columns:1fr}
+  .method-card,.research-card{padding:24px}
+  .positioning-callout{padding-left:18px}
+  .contact-links a{overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
