@@ -42,3 +42,60 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offs
   .contact-links a{overflow-wrap:anywhere}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Client-facing homepage and supporting methodology page. */
+section[id]{scroll-margin-top:24px}
+.hero h1{line-height:.95}
+.hero-detail{font-size:1.02rem;line-height:1.6;color:#45525d;max-width:48ch}
+.hero-emblem{pointer-events:none}
+.section-intro{font-size:1.05rem;line-height:1.65;max-width:66ch;margin:24px 0 0;color:#45525d}
+.section-intro strong{color:var(--navy)}
+.card-number{color:#526b59}
+.engagement-card{min-height:0;padding:28px}
+.engagement-card h3{margin:38px 0 18px;max-width:19ch;line-height:1.12}
+.engagement-card>p{margin-bottom:26px;max-width:none}
+.deliverable{margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+.deliverable h4,.case-detail dt{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#326573;margin:0 0 7px}
+.deliverable p{max-width:none;font-size:.95rem}
+.case-card{min-height:0}
+.case-card .experience-kicker{margin-bottom:30px}
+.case-card h3{max-width:18ch}
+.case-detail{margin:0}
+.case-detail dd{margin:0 0 20px;color:#45525d;font-size:.96rem;line-height:1.6}
+.case-detail dd:last-child{margin-bottom:0}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.resource-card{min-width:0;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.resource-card .experience-kicker{min-height:2.6em;margin-bottom:30px;font-size:.66rem}
+.resource-card h3{font-size:clamp(1.5rem,2.3vw,2rem);line-height:1.12;letter-spacing:-.025em;overflow-wrap:anywhere;margin:0 0 20px}
+.resource-card>p:not(.experience-kicker){color:#45525d}
+.resource-card .release-status{display:flex;gap:10px;align-items:center;font-size:.8rem;font-weight:600;margin:auto 0 0;padding-top:24px;color:#344d40}
+.status-dot{display:inline-block;flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:#6b8574}
+.research-card .experience-kicker{margin-bottom:26px}
+.research-card>p:last-child{margin-bottom:0}
+.about-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
+.about h2{font-size:clamp(2.6rem,5vw,5rem);line-height:1}
+.about-copy{font-size:1.06rem}
+.contact-sub{max-width:64ch;font-size:1.06rem}
+.contact-note{max-width:65ch;font-size:.85rem;color:#4f5c67}
+.methodology-main{padding-block:70px 90px}
+.methodology-heading{padding-bottom:42px;border-bottom:1px solid var(--line)}
+.methodology-heading h1{font-size:clamp(2.6rem,6.5vw,6.3rem);line-height:1;max-width:22ch}
+.methodology-content{max-width:78ch;margin:0 auto}
+.methodology-content section{padding-top:42px;font-size:1.08rem;line-height:1.7}
+.methodology-content h2{font-size:clamp(1.65rem,3vw,2.4rem);line-height:1.12;letter-spacing:-.025em;margin-bottom:20px}
+.methodology-content p a{text-decoration:underline;text-underline-offset:3px}
+.methodology-actions{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-top:42px}
+@media(max-width:1100px) and (min-width:901px){.hero-grid{gap:42px}.hero h1{font-size:7.4vw}}
+@media(max-width:900px){
+  .service-grid,.experience-grid,.resource-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .resource-card .experience-kicker{min-height:0;margin-bottom:20px}
+  .engagement-card h3{margin-top:26px;max-width:none}
+  .resource-card h3,.case-card h3{max-width:none}
+  .methodology-main{padding-block:48px 70px}
+}
+@media(max-width:600px){
+  .engagement-card,.case-card,.resource-card{padding:24px}
+  .methodology-actions{align-items:flex-start;flex-direction:column}
+  .methodology-heading h1{font-size:clamp(2.2rem,9vw,3.4rem)}
+}
