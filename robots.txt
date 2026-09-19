@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://clausongeomet.com/sitemap.xml
+Sitemap: https://clausongeomet.com/writing/sitemap.xml
