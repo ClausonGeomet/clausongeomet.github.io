@@ -5,7 +5,7 @@ Static consultancy site hosted by GitHub Pages. There is no package manager, bac
 ## Content
 
 - `index.html`: client-facing homepage, experience and release-status cards.
-- `approach/index.html`: methodology and the retained further-reading links.
+- `approach/index.html`: expanded methodology page.
 - `styles.css`, `brand-overrides.css`, `approach.css`: base design and responsive layouts.
 - `assets/`: existing approved branding and public CV. These assets have not been replaced in this update.
 
@@ -29,4 +29,4 @@ Check the homepage and `/approach/` on narrow and wide screens, all section link
 
 ## Editing safely
 
-Retain the existing `#approach`, `#services`, `#experience`, `#work`, `#research`, `#about` and `#contact` anchors. Change only the relevant status card when releasing a resource. The two previously removed R for Data Science / Welcome to the Tidyverse links must not be reintroduced.
+Retain the existing `#approach`, `#services`, `#experience`, `#work`, `#research`, `#about` and `#contact` anchors. Change only the relevant status card when releasing a resource. Keep the methodology page concise and client-facing; add references only when they materially support published technical content.
