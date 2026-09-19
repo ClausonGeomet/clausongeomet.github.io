@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f1e9"/>
+  <g stroke="#d8d5cc" stroke-width="1">
+    <line x1="48" y1="42" x2="1152" y2="42"/>
+    <line x1="48" y1="588" x2="1152" y2="588"/>
+    <line x1="48" y1="42" x2="48" y2="588"/>
+    <line x1="1152" y1="42" x2="1152" y2="588"/>
+  </g>
+  <image href="logo-lockup-final.png" x="72" y="68" width="480" height="128" preserveAspectRatio="xMinYMid meet"/>
+  <image href="logo-mark-final.png" x="900" y="175" width="270" height="270" opacity="0.08"/>
+  <g fill="#1f3143" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="64">
+    <text x="72" y="310">Statistical geometallurgy</text>
+    <text x="72" y="392">for better decisions.</text>
+  </g>
+  <rect x="72" y="418" width="170" height="5" fill="#98aa9a"/>
+  <text x="72" y="535" fill="#2f7f8f" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="2">GEOLOGY  ×  PROCESSING  ×  STATISTICS</text>
+  <text x="1128" y="535" text-anchor="end" fill="#1f3143" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="1.5">CLAUSONGEOMET.COM</text>
+</svg>
