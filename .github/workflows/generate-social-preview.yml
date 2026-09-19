@@ -2,31 +2,53 @@ name: Generate social preview
 
 on:
   push:
+    branches: [main]
     paths:
       - 'assets/social-preview.svg'
+      - 'assets/logo-lockup-final.png'
+      - 'assets/logo-mark-final.png'
       - '.github/workflows/generate-social-preview.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: social-preview
+  cancel-in-progress: false
+
 jobs:
   render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - name: Install SVG renderer
         run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
-      - name: Render social preview
-        run: rsvg-convert --width 1200 --height 630 assets/social-preview.svg --output assets/social-preview.png
-      - name: Commit rendered PNG
+      - name: Render and safely commit PNG
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/social-preview.png
-          if git diff --cached --quiet; then
-            echo "No preview changes to commit."
-          else
-            git commit -m "Generate social preview image"
-            git push
-          fi
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            rsvg-convert --width 1200 --height 630 assets/social-preview.svg --output assets/social-preview.png
+            test -s assets/social-preview.png
+            git add assets/social-preview.png
+            if git diff --cached --quiet; then
+              echo "Social preview is up to date."
+              exit 0
+            fi
+            git commit -m "Generate branded social preview PNG"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Website changed during rendering; retrying against the latest main."
+            sleep 2
+          done
+          echo "Could not publish the preview after three attempts."
+          exit 1
