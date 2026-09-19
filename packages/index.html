@@ -4,37 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Packages | Clauson Geomet</title>
-  <meta name="description" content="Open-source statistical software from Clauson Geomet for geometallurgical and process-data analysis.">
+  <meta name="description" content="Explore chRonostatistics: open-source R software for chronological variograms and process-data analysis from Clauson Geomet.">
   <meta name="theme-color" content="#f4f1e9">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="author" content="Matt Clauson">
   <meta property="og:title" content="Packages | Clauson Geomet">
-  <meta property="og:description" content="Open-source statistical software from Clauson Geomet for geometallurgical and process-data analysis.">
+  <meta property="og:description" content="Reusable statistical software for process data. Explore chRonostatistics, its worked example and installation instructions.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Clauson Geomet">
   <meta property="og:locale" content="en_AU">
   <meta property="og:url" content="https://clausongeomet.com/packages/">
   <meta property="og:image" content="https://clausongeomet.com/assets/social-preview.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clauson Geomet — Statistical geometallurgy for better decisions">
   <link rel="canonical" href="https://clausongeomet.com/packages/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Packages | Clauson Geomet">
-  <meta name="twitter:description" content="Open-source statistical software from Clauson Geomet for geometallurgical and process-data analysis.">
+  <meta name="twitter:description" content="Open-source R software for chronological variograms and process-data analysis.">
   <meta name="twitter:image" content="https://clausongeomet.com/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="Clauson Geomet — Statistical geometallurgy for better decisions">
   <link rel="icon" href="../assets/logo-mark-final.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../brand-overrides.css">
   <link rel="stylesheet" href="../approach.css?v=20260919-resources">
+  <link rel="stylesheet" href="../resource-pages.css?v=20260919-launch">
 </head>
-<body class="methodology-page">
+<body class="methodology-page resource-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <header class="site-header shell">
     <a class="brand brand-image" href="../" aria-label="Clauson Geomet home">
       <img src="../assets/logo-lockup-final.png" alt="Clauson Geomet — Statistical Geometallurgy Consultant" class="brand-logo-image">
     </a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="../">Home</a><a href="../approach/">Approach</a><a href="../#services">Services</a><a href="../#experience">Experience</a><a href="/writing/">Blog</a><a href="../packages/">Packages</a><a href="../tools/">Tools</a><a href="../#contact">Contact</a>
+      <a href="../">Home</a><a href="../approach/">Approach</a><a href="../#services">Services</a><a href="../#experience">Experience</a><a href="/writing/">Blog</a><a href="../packages/" aria-current="page">Packages</a><a href="../tools/">Tools</a><a href="../#contact">Contact</a>
     </nav>
   </header>
   <main id="top" class="shell methodology-main">
@@ -47,11 +51,33 @@
       <section aria-labelledby="chronostatistics-title">
         <div class="resource-grid">
           <article class="resource-card">
-            <p class="experience-kicker">R PACKAGE / OPEN SOURCE</p>
-            <h2 id="chronostatistics-title">chRonostatistics</h2>
-            <p>Chronological variograms and variance-component analysis for process data, with reproducible R workflows.</p>
-            <p class="release-status"><span class="status-dot" aria-hidden="true"></span>Open source · MIT licence</p>
-            <a class="text-link" href="https://github.com/ClausonGeomet/ChRonostatistics" target="_blank" rel="noopener noreferrer">View package on GitHub <span aria-hidden="true">↗</span></a>
+            <div class="resource-feature">
+              <div>
+                <p class="experience-kicker">R PACKAGE / PROCESS ANALYTICS</p>
+                <h2 id="chronostatistics-title">chRonostatistics</h2>
+                <p class="release-status"><span class="status-dot" aria-hidden="true"></span>Available on GitHub · MIT licence</p>
+                <p>Explore variation in ordered process data using chronological variograms, integral transforms and engineering variance-component analysis.</p>
+                <p>The package includes data checks, plotting methods and reproducible process simulations. Start with the synthetic worked example, then interpret your own results in the context of the sampling and operating process.</p>
+                <div class="resource-actions">
+                  <a class="button button-dark" href="https://github.com/ClausonGeomet/chRonostatistics-r" target="_blank" rel="noopener noreferrer">View package on GitHub <span aria-hidden="true"> ↗</span></a>
+                  <a class="text-link" href="https://github.com/ClausonGeomet/chRonostatistics-r#quick-example" target="_blank" rel="noopener noreferrer">Worked example <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+              <aside class="resource-aside" aria-label="Install chRonostatistics">
+                <h3>Get started in R</h3>
+                <p>Install from the public GitHub repository:</p>
+                <pre><code>install.packages("remotes")
+remotes::install_github(
+  "ClausonGeomet/chRonostatistics-r"
+)
+library(chRonostatistics)</code></pre>
+                <p>Installation guidance, methodology and examples are maintained in the package repository.</p>
+              </aside>
+            </div>
+            <div class="resource-notes">
+              <h3>Methods need context.</h3>
+              <p class="resource-note">The process, sampling interval, time window and assumptions all matter to interpretation. These tools support analysis; they do not replace geological and operating knowledge.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -61,8 +87,8 @@
       </div>
     </div>
   </main>
-  <footer class="footer shell"><span>© <span id="year">2026</span> Clauson Geomet</span><a href="../">Back to the homepage</a></footer>
+  <footer class="footer shell"><span>© <span id="year">2026</span> Clauson Geomet</span><a href="../#contact">Discuss a project</a></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f19f7dc5e664422d9f7bcd49982e9f7c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f19f7dc5e664422d9f7bcd49982e9f7c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
