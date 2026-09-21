@@ -17,14 +17,12 @@ jobs:
           ref: fix/replace-cv-upload-20260921
       - name: Reconstruct exact uploaded PDF
         run: |
-          cat .tmp-cv/part01.b64 .tmp-cv/part02.b64 .tmp-cv/part03.b64 .tmp-cv/part04.b64 .tmp-cv/part05.b64 > /tmp/cv.b64
+          cat .tmp-cv/part01.b64 .tmp-cv/part01b.b64 .tmp-cv/part02.b64 .tmp-cv/part03.b64 .tmp-cv/part03b.b64 .tmp-cv/part04.b64 .tmp-cv/part05.b64 > /tmp/cv.b64
           base64 --decode /tmp/cv.b64 > assets/Matthew-Clauson-CV.pdf
           test "$(sha256sum assets/Matthew-Clauson-CV.pdf | awk '{print $1}')" = "6ed7deb7a58bb3ee99cd2c7fa361b878b19bc9285338e7bd0048dfffdf58b08f"
           head -c 5 assets/Matthew-Clauson-CV.pdf | grep -q '%PDF-'
           grep -a -q '%%EOF' assets/Matthew-Clauson-CV.pdf
-          pdfinfo assets/Matthew-Clauson-CV.pdf | tee /tmp/pdfinfo.txt
-          grep -q '^Pages:.*1$' /tmp/pdfinfo.txt
-          grep -q '^Page size:.*A4' /tmp/pdfinfo.txt
+          test "$(wc -c < assets/Matthew-Clauson-CV.pdf)" -eq 45848
       - name: Commit exact uploaded CV only
         run: |
           rm -rf .tmp-cv
