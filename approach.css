@@ -2,6 +2,9 @@
 .site-header{gap:28px}
 .nav{flex-wrap:wrap;justify-content:flex-end;column-gap:22px;row-gap:0}
 .nav a{white-space:nowrap}
+.nav .nav-cv{border:1px solid var(--teal);padding:7px 10px;color:var(--teal);font-weight:700;line-height:1}
+.nav .nav-cv:after{display:none}
+.nav .nav-cv:hover{background:var(--teal);color:var(--cream)}
 .skip-link{position:absolute;left:16px;top:-100px;z-index:10;background:var(--navy);color:var(--cream);padding:12px 18px}
 .skip-link:focus{top:12px}
 a:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:5px}
