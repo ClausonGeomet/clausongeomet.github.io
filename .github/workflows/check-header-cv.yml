@@ -1,0 +1,67 @@
+name: Check header CV link
+on:
+  push:
+    branches: [release/header-cv-link-20260921]
+    paths:
+      - .github/workflows/check-header-cv.yml
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: release/header-cv-link-20260921
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install checks
+        run: |
+          python -m pip install playwright beautifulsoup4
+          python -m playwright install --with-deps chromium
+      - name: Check navigation, PDF and mobile overflow
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+          from threading import Thread
+          from functools import partial
+          from playwright.sync_api import sync_playwright
+
+          root=Path('.').resolve()
+          pages=['index.html','approach/index.html','packages/index.html','tools/index.html','drillhole-optimiser/index.html']
+          for p in pages:
+              soup=BeautifulSoup((root/p).read_text(),'html.parser')
+              links=soup.select('nav.nav a.nav-cv[href="/assets/Matthew-Clauson-CV.pdf"]')
+              assert len(links)==1,(p,len(links))
+              assert links[0].get_text(strip=True)=='CV PDF'
+          pdf=(root/'assets/Matthew-Clauson-CV.pdf').read_bytes()
+          assert pdf.startswith(b'%PDF-')
+          assert b'%%EOF' in pdf
+
+          class Quiet(SimpleHTTPRequestHandler):
+              def log_message(self,*args): pass
+          server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(root)))
+          Thread(target=server.serve_forever,daemon=True).start()
+          origin=f'http://127.0.0.1:{server.server_port}'
+          try:
+              with sync_playwright() as pw:
+                  browser=pw.chromium.launch()
+                  page=browser.new_page()
+                  for width in (320,375,390,600,768,1024,1440):
+                      page.set_viewport_size({'width':width,'height':800})
+                      for path in ('/','/approach/','/packages/','/tools/','/drillhole-optimiser/'):
+                          page.goto(origin+path,wait_until='networkidle')
+                          dims=page.evaluate('({w:innerWidth,s:document.documentElement.scrollWidth})')
+                          assert dims['s']<=dims['w']+1,(width,path,dims)
+                          cv=page.locator('nav.nav a.nav-cv')
+                          assert cv.count()==1,(width,path)
+                          assert cv.is_visible(),(width,path)
+                  browser.close()
+          finally:
+              server.shutdown()
+          print('PASS: CV link present and visible; no horizontal overflow at 7 widths on 5 pages.')
+          PY
