@@ -51,10 +51,11 @@ jobs:
               with sync_playwright() as pw:
                   browser=pw.chromium.launch()
                   page=browser.new_page()
+                  page.route('**/*', lambda route: route.continue_() if route.request.url.startswith(origin) else route.abort())
                   for width in (320,375,390,600,768,1024,1440):
                       page.set_viewport_size({'width':width,'height':800})
                       for path in ('/','/approach/','/packages/','/tools/','/drillhole-optimiser/'):
-                          page.goto(origin+path,wait_until='networkidle')
+                          page.goto(origin+path,wait_until='domcontentloaded')
                           dims=page.evaluate('({w:innerWidth,s:document.documentElement.scrollWidth})')
                           assert dims['s']<=dims['w']+1,(width,path,dims)
                           cv=page.locator('nav.nav a.nav-cv')
