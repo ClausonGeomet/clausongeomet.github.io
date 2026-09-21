@@ -17,7 +17,8 @@ jobs:
           ref: fix/replace-cv-upload-20260921
       - name: Reconstruct exact uploaded PDF
         run: |
-          cat .tmp-cv/part01.b64 .tmp-cv/part01b.b64 .tmp-cv/part02.b64 .tmp-cv/part03.b64 .tmp-cv/part03b.b64 .tmp-cv/part04.b64 .tmp-cv/part05.b64 > /tmp/cv.b64
+          { head -c 1188 .tmp-cv/part01.b64; cat .tmp-cv/part01b.b64; tail -c +1189 .tmp-cv/part01.b64; } > /tmp/chunk01.b64
+          cat /tmp/chunk01.b64 .tmp-cv/part02.b64 .tmp-cv/part03.b64 .tmp-cv/part03b.b64 .tmp-cv/part04.b64 .tmp-cv/part05.b64 > /tmp/cv.b64
           base64 --decode /tmp/cv.b64 > assets/Matthew-Clauson-CV.pdf
           test "$(sha256sum assets/Matthew-Clauson-CV.pdf | awk '{print $1}')" = "6ed7deb7a58bb3ee99cd2c7fa361b878b19bc9285338e7bd0048dfffdf58b08f"
           head -c 5 assets/Matthew-Clauson-CV.pdf | grep -q '%PDF-'
@@ -33,4 +34,4 @@ jobs:
           git commit -m 'Replace public CV with uploaded PDF'
           git push origin HEAD:refs/heads/fix/replace-cv-upload-20260921
 
-# staged data complete
+# staged data complete and offset repaired
