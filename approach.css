@@ -99,3 +99,26 @@ section[id]{scroll-margin-top:24px}
   .methodology-actions{align-items:flex-start;flex-direction:column}
   .methodology-heading h1{font-size:clamp(2.2rem,9vw,3.4rem)}
 }
+
+/* Launch polish: client-first content, integrated research and compact mobile entry. */
+.research-inline{margin-top:48px;padding-top:30px;border-top:1px solid var(--line)}
+.research-heading{margin-bottom:26px}
+.research-heading h3{font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.12;letter-spacing:-.025em;margin:0}
+.research-card h4{font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.12;letter-spacing:-.025em;margin:0 0 22px}
+.hero-actions{margin-top:24px}
+.hero-detail{margin:24px 0 0}
+.demo-actions .button{max-width:100%;min-width:0;white-space:normal;text-align:center;padding-block:12px}
+@media(max-width:600px){
+  .site-header{min-height:0;padding-block:12px;gap:8px}
+  .site-header .brand-logo-image{width:min(210px,66vw);height:auto}
+  .nav{gap:0 16px;font-size:.64rem;letter-spacing:.08em}
+  .nav a{padding-block:6px}
+  .hero{padding:30px 0 48px}
+  .hero-grid{gap:22px;margin-top:20px}
+  .hero .eyebrow{font-size:.65rem;letter-spacing:.12em}
+  .hero .lede{font-size:1.1rem;line-height:1.45;margin-bottom:0}
+  .hero-actions{margin-top:20px;gap:16px}
+  .hero-detail{font-size:1rem;margin-top:24px}
+  .contact h2{font-size:clamp(2rem,9.8vw,4rem)}
+  .research-inline{margin-top:36px}
+}
