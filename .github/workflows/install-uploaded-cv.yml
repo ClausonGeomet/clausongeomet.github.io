@@ -32,3 +32,5 @@ jobs:
           git add -A
           git commit -m 'Replace public CV with uploaded PDF'
           git push origin HEAD:refs/heads/fix/replace-cv-upload-20260921
+
+# staged data complete
