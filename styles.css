@@ -74,7 +74,7 @@ h1{
 
 .section-heading{display:grid;grid-template-columns:1fr 3fr;gap:40px;margin-bottom:58px}
 .section-heading h2,.about h2,.contact h2{font-size:clamp(2.8rem,6vw,6.4rem);line-height:.92;letter-spacing:-.045em;margin:0}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .service-card{min-height:390px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
 .card-number{font-size:.75rem;letter-spacing:.14em;color:var(--sage);font-weight:700}
 .service-card h3{font-size:1.65rem;margin:100px 0 18px;letter-spacing:-.02em;max-width:13ch}
