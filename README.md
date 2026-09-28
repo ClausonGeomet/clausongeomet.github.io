@@ -1,32 +1,36 @@
 # Clauson Geomet website
 
-Static consultancy site hosted by GitHub Pages. There is no package manager, backend or build step.
+This repository contains the public website for **Clauson Geomet**, my statistical geometallurgy consultancy.
 
-## Content
+The site is deliberately simple: static HTML and CSS hosted with GitHub Pages, with no backend or build step.
 
-- `index.html`: client-facing homepage, experience and release-status cards.
-- `approach/index.html`: expanded methodology page.
-- `styles.css`, `brand-overrides.css`, `approach.css`: base design and responsive layouts.
-- `assets/`: existing approved branding and public CV. These assets have not been replaced in this update.
+**Website:** https://clausongeomet.com
 
-## Release checklist
+## What's here
 
-The homepage deliberately does not link unreleased resources to a generic GitHub profile.
+- `index.html` — consultancy homepage, services, experience and current work.
+- `approach/` — a longer explanation of the statistical geometallurgy approach.
+- `packages/` — public software and package links.
+- `tools/` and `drillhole-optimiser/` — public-facing material for analytical tools.
+- `assets/` — branding, social preview images and the public CV.
+- `styles.css`, `brand-overrides.css`, `approach.css` and `resource-pages.css` — site styling.
 
-- [ ] **chRonostatistics:** once released, add its exact public repository/documentation URL to `#chronostatistics` and replace the preparation status. Confirm the package name, install command, README and licence before linking.
-- [ ] **Element-to-mineral conversion:** publish the reviewed article and link it from `#element-to-mineral`.
-- [ ] **Geometallurgical Drillhole Optimiser:** link the hosted public Shiny app from `#drillhole-optimiser`. Keep source code private; do not upload app code or client data to this public website repository. Confirm app examples and data handling before launch.
-- [ ] Add a final custom domain and update canonical/Open Graph URLs on both pages after it is configured.
-- [ ] Add a dedicated social-preview image and `og:image` metadata.
-- [ ] Review the public CV, permissions and anonymised project summaries before promoting the site widely.
-
-No release date, live app URL or source-code availability is implied by the status cards. Update them when each resource is actually released.
+Technical writing is maintained separately and published under the site's `/writing/` section.
 
 ## Local preview
 
-From this folder, run `python3 -m http.server 8000`, then open `http://localhost:8000/`.
-Check the homepage and `/approach/` on narrow and wide screens, all section links, the CV and the email links. Do not use a local file preview to test directory URLs.
+From the repository root:
 
-## Editing safely
+```bash
+python3 -m http.server 8000
+```
 
-Retain the existing `#approach`, `#services`, `#experience`, `#work`, `#research`, `#about` and `#contact` anchors. Change only the relevant status card when releasing a resource. Keep the methodology page concise and client-facing; add references only when they materially support published technical content.
+Then open `http://localhost:8000/`.
+
+When changing the site, check the homepage and `/approach/` at narrow and wide widths, along with navigation, CV and external links.
+
+## A note on project material
+
+The website only contains material intended to be public. Client data, internal project files and source code for private tools stay outside this repository.
+
+Examples from previous industry roles are intentionally anonymised and are clearly separated from work delivered through Clauson Geomet.
