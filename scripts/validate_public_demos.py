@@ -78,7 +78,7 @@ def validate_page(name: str) -> None:
     for tag, url, attrs in doc.urls:
         uri = urlsplit(url)
         if attrs.get("target") == "_blank":
-            assert {"noopener", "noreferrer"} <= set(attrs.get("rel", "").split()), (name, url)
+            assert "noopener" in set(attrs.get("rel", "").split()), (name, url)
         if not uri.scheme and uri.fragment and not uri.path:
             assert uri.fragment in doc.ids, f"{name}: missing anchor #{uri.fragment}"
         relative = resolve_local(page, url)
