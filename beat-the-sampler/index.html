@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beat the Sampler | Interactive Geometallurgical Sampling | Clauson Geomet</title>
+  <meta name="description" content="Choose fictional drill-core tests under an AUD 4,500 budget, then compare your decisions with geological coverage and Bayesian Information Gain sampling.">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Matt Clauson">
+  <link rel="canonical" href="https://clausongeomet.com/beat-the-sampler/">
+  <meta property="og:title" content="Beat the Sampler — Which core would you test? | Clauson Geomet">
+  <meta property="og:description" content="An interactive fictional challenge: choose drill-core tests within a budget and explore what Bayesian Information Gain actually measures.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Clauson Geomet">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://clausongeomet.com/beat-the-sampler/">
+  <meta property="og:image" content="https://clausongeomet.com/assets/social-preview.png">
+  <meta property="og:image:alt" content="Clauson Geomet — Statistical geometallurgy for better decisions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Beat the Sampler — Which core would you test?">
+  <meta name="twitter:description" content="Test your geological intuition against an information-theoretic sampler in a fictional BIF challenge.">
+  <meta name="twitter:image" content="https://clausongeomet.com/assets/social-preview.png">
+  <link rel="icon" href="../assets/logo-mark-final.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../brand-overrides.css">
+  <link rel="stylesheet" href="../approach.css?v=20260921-release">
+  <link rel="stylesheet" href="../demo-landing.css?v=20261026">
+</head>
+<body class="resource-page demo-page">
+  <a class="skip-link" href="#top">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand brand-image" href="../" aria-label="Clauson Geomet home">
+      <img src="../assets/logo-lockup-final.png" alt="Clauson Geomet — Statistical Geometallurgy Consultant" class="brand-logo-image">
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../">Home</a><a href="../#services">Services</a><a href="../#experience">Experience</a><a href="../approach/">Approach</a><a href="/writing/">Blog</a><a href="../packages/">Packages</a><a href="../tools/" aria-current="page">Tools</a><a class="nav-cv" href="/assets/Matthew-Clauson-CV.pdf" target="_blank" rel="noopener" aria-label="Open Matthew Clauson CV PDF">CV PDF</a><a href="../#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="demo-intro" aria-labelledby="game-title">
+      <p class="section-index">INTERACTIVE CHALLENGE / FICTIONAL GEOLOGY</p>
+      <div class="demo-layout">
+        <div>
+          <h1 id="game-title">Beat the Sampler.<br>What would you test?</h1>
+          <p class="demo-lede">You have an invented iron-ore deposit, plenty of geological observations and a limited testwork budget. Can you pick a more informative collection of core specimens than a sampling algorithm?</p>
+          <p class="demo-lede">Choose up to three Bond Ball Mill Work Index (BBWi) tests, then compare your programme with Random, Representative and Information Gain approaches. The interesting part is <strong>why</strong> the choices differ, not just who “wins”.</p>
+          <div class="demo-actions">
+            <a class="button button-dark" href="https://01a16671-529d-e153-02bf-4aa206a894ae.share.connect.posit.cloud/" target="_blank" rel="noopener noreferrer">Play Beat the Sampler ↗</a>
+            <a class="text-link" href="https://01a16671-529d-e153-02bf-4aa206a894ae.share.connect.posit.cloud/how-it-works.html" target="_blank" rel="noopener noreferrer">How it works + the maths ↗</a>
+          </div>
+          <p class="demo-note">Free-to-explore, fictional public beta hosted on Posit Connect Cloud. No account or actual mine-site data is needed for the challenge.</p>
+        </div>
+        <aside class="demo-aside" aria-labelledby="game-question">
+          <span class="section-index">THE QUESTION</span>
+          <h2 id="game-question">What makes a sample informative?</h2>
+          <p>The highest-silica interval? A missing geological domain? A specimen far from the ones you've already tested? Each instinct answers a slightly different question.</p>
+          <p>The challenge explores <strong>geological coverage, conditional information, redundancy and quoted testwork cost</strong> in a small, inspectable example.</p>
+          <a class="aside-link" href="#learn">See what the challenge teaches ↓</a>
+        </aside>
+      </div>
+    </section>
+
+    <div class="demo-facts" aria-label="Fictional challenge parameters">
+      <div class="demo-fact"><span>Previously drilled</span><strong>16 holes</strong><p>Fictional geological domains and assays</p></div>
+      <div class="demo-fact"><span>Existing BBWi</span><strong>36 results</strong><p>Already returned laboratory observations</p></div>
+      <div class="demo-fact"><span>Untested core</span><strong>12 intervals</strong><p>BBWi genuinely missing in this game</p></div>
+      <div class="demo-fact"><span>Fictional budget</span><strong>AUD 4,500</strong><p>Up to three additional tests</p></div>
+    </div>
+
+    <section class="demo-section" id="play" aria-labelledby="play-title">
+      <p class="section-index">ONE SMALL EXPERIMENT</p>
+      <h2 id="play-title">Explore. Select. Compare.</h2>
+      <div class="demo-steps">
+        <article class="demo-step"><span class="step-number">01 / LOOK</span><h3>Explore the geology</h3><p>Switch between depth slices. Inspect the fictional domains, routine assays and which intervals already have BBWi.</p></article>
+        <article class="demo-step"><span class="step-number">02 / CHOOSE</span><h3>Make a testwork basket</h3><p>Select one to three currently untested specimens. Watch the hypothetical laboratory quote accumulate against the fixed budget.</p></article>
+        <article class="demo-step"><span class="step-number">03 / LEARN</span><h3>Compare expected information</h3><p>Lock your basket and compare your choices with five reproducible sampling baselines under the same model and budget cap.</p></article>
+      </div>
+      <p class="demo-note">Locking a basket scores possible tests; it does not purchase material or reveal any missing laboratory result. A sampled location's expected information depends on the fitted model and the targets you want to predict.</p>
+    </section>
+
+    <section class="demo-section" id="learn" aria-labelledby="learn-title">
+      <p class="section-index">THE MATHEMATICAL IDEA</p>
+      <h2 id="learn-title">The most unusual core isn't always the best addition to the batch.</h2>
+      <p class="demo-quote">A geologically interesting specimen and an informative testwork programme are not necessarily the same thing.</p>
+      <div class="demo-duo">
+        <article>
+          <p class="demo-kicker">GEOLOGICAL COVERAGE</p>
+          <h3>Where are the gaps?</h3>
+          <p>Different domains, spatial settings and assay compositions may need representation. Selecting more samples from the same geological neighbourhood can also create redundancy.</p>
+        </article>
+        <article>
+          <p class="demo-kicker">BAYESIAN INFORMATION GAIN</p>
+          <h3>Where might we learn most?</h3>
+          <p>A Gaussian-process model estimates how a proposed test could reduce uncertainty at specified prediction targets. After adding one candidate to the batch, another may contribute less because their information overlaps.</p>
+        </article>
+      </div>
+      <p>In the frozen challenge, an extremely SiO₂-rich specimen can rank highly as an <em>individual</em> information-gain candidate yet be omitted from the <em>cost-aware combination</em>. That is not a contradiction: the batch also depends on its costs, alternative specimens and information overlap.</p>
+      <p>The score is <strong>model-expected learning</strong>, not realised prediction error. One seeded Random comparison does not establish that IG is generally superior.</p>
+      <div class="demo-actions">
+        <a class="text-link" href="https://01a16671-529d-e153-02bf-4aa206a894ae.share.connect.posit.cloud/how-it-works.html" target="_blank" rel="noopener noreferrer">Explore the equations, symbols and worked example ↗</a>
+      </div>
+    </section>
+
+    <section class="demo-section" aria-labelledby="next-title">
+      <p class="section-index">FROM AN INTERACTIVE CHALLENGE TO A PLANNING WORKFLOW</p>
+      <h2 id="next-title">What if you also had to verify the physical core?</h2>
+      <p>Beat the Sampler leaves out some important operational decisions. Does the material still exist? Is enough core available for the laboratory method? How should geological coverage be planned before using information-theoretic acquisitions?</p>
+      <p>The separate <a href="../drillhole-optimiser/"><strong>Geometallurgical Testwork Optimiser</strong></a> demonstrates physical specimen eligibility, budgeted coverage planning and a fictional sequential laboratory mode where selected results are returned before the model updates.</p>
+      <div class="demo-actions"><a class="button" href="../drillhole-optimiser/">Explore the full optimiser ↗</a></div>
+    </section>
+
+    <div class="demo-disclaimer" role="note">
+      <p><strong>Research demonstration, not operational advice.</strong> All geological data and quoted costs are fictional. The 12 untested BBWi responses are genuinely missing and are never invented or revealed. Expected uncertainty reduction does not prove improved holdout RMSE, calibrated predictive uncertainty, economic EVSI or actual mine-site savings.</p>
+    </div>
+
+    <div class="demo-final">
+      <h2>Ready to choose your samples?</h2>
+      <p>Start with your geological intuition. See what the Sampler chooses, then explore the mathematics behind the difference.</p>
+      <div class="demo-actions">
+        <a class="button" href="https://01a16671-529d-e153-02bf-4aa206a894ae.share.connect.posit.cloud/" target="_blank" rel="noopener noreferrer">Play the challenge ↗</a>
+        <a href="../tools/">Browse both interactive demonstrations ↗</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer shell"><span>© 2026 Clauson Geomet</span><a href="../tools/">All tools</a></footer>
+  <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f19f7dc5e664422d9f7bcd49982e9f7c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
