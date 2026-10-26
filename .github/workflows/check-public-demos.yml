@@ -1,0 +1,36 @@
+name: Check public demo pages
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "tools/index.html"
+      - "beat-the-sampler/**"
+      - "drillhole-optimiser/**"
+      - "demo-landing.css"
+      - "sitemap.xml"
+      - "scripts/validate_public_demos.py"
+      - ".github/workflows/check-public-demos.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "index.html"
+      - "tools/index.html"
+      - "beat-the-sampler/**"
+      - "drillhole-optimiser/**"
+      - "demo-landing.css"
+      - "sitemap.xml"
+      - "scripts/validate_public_demos.py"
+      - ".github/workflows/check-public-demos.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public pages and local links
+        run: python3 scripts/validate_public_demos.py
