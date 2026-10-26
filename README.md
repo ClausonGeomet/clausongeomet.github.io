@@ -11,7 +11,10 @@ The site is deliberately simple: static HTML and CSS hosted with GitHub Pages, w
 - `index.html` — consultancy homepage, services, experience and current work.
 - `approach/` — a longer explanation of the statistical geometallurgy approach.
 - `packages/` — public software and package links.
-- `tools/` and `drillhole-optimiser/` — public-facing material for analytical tools.
+- `tools/` — index of the two interactive educational tools.
+- `beat-the-sampler/` — public-facing landing page for the fictional sampling challenge and its separate hosted help guide.
+- `drillhole-optimiser/` — landing page for coverage-first specimen planning and the simulated laboratory/IG workflow.
+- `demo-landing.css` — shared styles for public demo pages and homepage demo cards.
 - `assets/` — branding, social preview images and the public CV.
 - `styles.css`, `brand-overrides.css`, `approach.css` and `resource-pages.css` — site styling.
 
@@ -27,7 +30,7 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000/`.
 
-When changing the site, check the homepage and `/approach/` at narrow and wide widths, along with navigation, CV and external links.
+When changing the site, check the homepage, `/tools/`, `/beat-the-sampler/` and `/drillhole-optimiser/` at narrow and wide widths, along with navigation, CV and external links. The game and DH apps are separately hosted on Posit Connect Cloud. The website pages link to them; they do not bundle private scientific source code or sensitive inputs.
 
 ## A note on project material
 
