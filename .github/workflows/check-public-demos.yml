@@ -10,6 +10,7 @@ on:
       - "demo-landing.css"
       - "sitemap.xml"
       - "scripts/validate_public_demos.py"
+      - "scripts/smoke_demo_pages.py"
       - ".github/workflows/check-public-demos.yml"
   push:
     branches: ["main"]
@@ -21,6 +22,7 @@ on:
       - "demo-landing.css"
       - "sitemap.xml"
       - "scripts/validate_public_demos.py"
+      - "scripts/smoke_demo_pages.py"
       - ".github/workflows/check-public-demos.yml"
 
 permissions:
@@ -29,8 +31,22 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - name: Verify public pages and local links
         run: python3 scripts/validate_public_demos.py
+      - name: Install isolated browser
+        run: |
+          python3 -m pip install playwright==1.63.0
+          python3 -m playwright install --with-deps chromium
+      - name: Verify desktop and mobile presentation
+        run: python3 scripts/smoke_demo_pages.py
+      - name: Save website preview screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-demo-pages-${{ github.run_id }}
+          path: browser-evidence/public-demo-pages/
+          retention-days: 7
+          if-no-files-found: warn
